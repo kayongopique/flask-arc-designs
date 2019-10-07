@@ -1,0 +1,183 @@
+
+/* social media section */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.info{
+    height: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.info li{
+    display: inline-block;
+}
+.contact-info{
+    padding-right: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+.contact-info li:last-child{
+    margin-left: 25px;
+}
+.icons{
+    margin-right: 56px;
+    margin-top: 6px;
+    
+}
+.icons li{
+    float: right;
+    padding: 5px;
+    margin-right: 36px; 
+}
+#facebook{
+    background-color: #3b5998;
+    color: #ffffff;
+    border-radius: 100%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 5px;
+
+}
+#twitter{
+    background-color: rgb(8,160,233);
+    color: #ffffff;
+    border-radius: 100%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 5px;
+
+
+}
+#google{
+    background-color: #d62d20;
+    color: #ffffff;
+    border-radius: 100%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+/* nav bar section */
+
+nav{
+    height: 100px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.actions ul,
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.actions{
+    float: right;
+}
+.actions ul li{
+    display: inline-block;
+    padding-top: 22px;
+    cursor: pointer;
+}
+.actions ul li:last-child{
+    padding-right: 72px;
+    padding-left: 45px;
+}
+.menu img{
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    top: 20px;
+    left: 45px;
+    bottom: 20px;
+}
+.menu p{
+    position: absolute;
+    left: 200px;
+    top: 45px;
+    border-top: 2px solid white;
+}
+.menu ul{
+    position: relative;
+    top: 45px;
+    left: 400px;
+}
+.menu ul li{
+    display: inline-block;
+    padding-left: 60px;
+    color: red;
+    cursor: pointer;
+}
+.fa-envelope,
+.fa-phone{
+    color: rgb(119, 121, 119);
+}
+.in{
+    font-size: 10px;
+}
+.fa{
+    color: white;
+}
+
+
+.courasel-container{
+    width: 100%;
+    margin: auto;
+    border: 2px solid black;
+    position: relative;
+}
+.courasel,
+.courasel img{
+    width: 100%;
+    height: 400px;
+    transition: 1s;
+    /*filter: grayscale(100%);*/
+    animation: fadeintext 3s ease-in;
+    /*infinite*/
+}
+@keyframes fadeintext{
+    from {opacity: 0;}
+    to {opacity: 1;}
+    /*from {transform: rotateX(0deg);}
+    to {transform: rotateY(360deg);}*/
+}
+.courasel,
+.courasel img:hover{
+    filter: grayscale(0);
+}
+.me{
+    opacity: 1;
+}
+#courasel-left-button{
+    position: absolute;
+    z-index: 10;
+    color: whitesmoke;
+    top: 40%;
+    left: 2%;
+    font-size: 50px;
+}
+#courasel-right-button{
+    color: whitesmoke;
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    right: 2%;
+    font-size: 50px;
+}

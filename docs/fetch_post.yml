@@ -1,0 +1,63 @@
+arcdesigns/docs/fetch_post.yml
+
+Pull posts
+---
+paths:
+  /api/designs:
+      get:
+        description: gets a list of posts from the database 
+        parameters:
+          - in: header
+            name: Authorization
+            description: authorization header
+            required: true
+            schema:
+              type: string
+              id: Token
+        
+      responses:
+        200:
+        description:  successful pull of posts from the database.
+        content:
+          application/json:
+              schema:
+                type: list
+                parameters:
+                  title:
+                    type: string
+                    example: pl123
+                  description:
+                    type: string
+                    example: 3 bedroon house
+                  body:
+                    type: string
+                    example: three bedroomhouse
+                  createdAt:
+                    type: date
+                    example: 24/06/2019
+                    updatedAt: 24/06/2019
+                  image: 
+                    type: uri
+                    example: /img/pl123.png
+        404:
+        description: posts not found
+        content:
+          application/json:
+              schema:
+                type: object
+                parameters:
+                  message:
+                    type: string
+                    example: not found
+      security:
+        - JWT:
+            description: Pass in jwt token. i.e Token <jwt>
+            -in: header
+             name: Authorization
+             type: apiKey
+             scheme: bearer 
+             bearerFormat: JWT
+     
+   
+
+

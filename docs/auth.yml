@@ -1,0 +1,94 @@
+arcdesigns/docs/auth.yml
+
+register user
+---
+paths:
+  /api/auth/signup:
+    post:
+      description: creates new user entity in the database table users.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              parameters:
+                key: 
+                  type: string
+                  value: user
+                username:
+                  type: string
+                  example: kayongo david
+                email:
+                  type: email
+                  example: kayongo@gmail.com
+                password:
+                  type: password
+                  example: q@2wefgyu
+                
+    responses:
+      201:
+        content:
+          application/json:
+              schema:
+                type: object
+                parameters:
+                  key: 
+                    type: string
+                    value: user
+                  username: 
+                    type: string
+                    example: kayongo david
+                  email:
+                    type: email
+                    example: kayongo@gmail.com
+                  image:
+                    type: url
+                    example: /img/david.png
+                  createdAt:
+                    type: date
+                    example: 24/06/2019
+                  updatedAt:
+                    type: date
+                    example: 24/06/2019
+      400:
+        description: user already registered
+
+  /api/auth/login:
+    post:
+        description: generates a jwt token and logs in the bearer of the token
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                parameters:
+                  key: 
+                    type: string
+                    value: user
+                  email:
+                    type: email
+                    example: kayongo@gmail.com
+                  password:
+                    type: password
+                    example: q@2wefgyu
+                  
+  response:
+    200:
+       content:
+          application/json:
+              schema:
+                type: object
+                parameters:
+                  - in: token
+                    name: Authorization
+                    description: authorization
+                    schema:
+                      type: string
+                      id: Token
+
+
+  
+
+

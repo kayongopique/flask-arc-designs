@@ -1,0 +1,57 @@
+arcdesigns/docs/create_post.yml
+
+create post
+---
+paths:
+  /api/designs:
+      post:
+        description: creates new post entity in the database
+        parameters:
+          - in: header
+            name: Authorization
+            description: authorization header
+            required: true
+            schema:
+              type: string
+              id: Token
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                parameters:
+                 title:
+                    type: string
+                    example: pl123
+                  description:
+                    type: string
+                    example: 3 bedroon house
+                  body:
+                    type: string
+                    example: three bedroomhouse
+                  createdAt:
+                    type: date
+                    example: 24/06/2019
+                    updatedAt: 24/06/2019
+                  image: 
+                    type: uri
+                    example: /img/pl123.png
+                 
+      responses:
+        201:
+        description: successful post creation.
+        400:
+        description: post already created
+      security:
+        - JWT:
+            description: Pass in jwt token. i.e Token <jwt>
+            -in: header
+             name: Authorization
+             type: apiKey
+             scheme: bearer 
+             bearerFormat: JWT
+     
+   
+
+

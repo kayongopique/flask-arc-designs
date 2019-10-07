@@ -1,0 +1,224 @@
+/*-------nav section-----*/
+body{
+    overflow: hidden;
+}
+
+
+nav{
+    position: fixed;
+    height: 70px;
+    background: linear-gradient(to left, #111110, #1d1b19);
+    color: white;
+    position: relative;
+    
+ 
+}
+.actions ul,
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.actions{
+    float: right;
+}
+.actions ul li{
+    display: inline-block;
+    padding-top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.actions ul li:last-child{
+    padding-right: 72px;
+    padding-left: 45px;
+}
+.menu img{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 8px;
+    left: 60px;
+  
+}
+.menu p{
+    position: absolute;
+    left: 135px;
+    top: 30px;
+    font-size: 18px;
+    border-top: 2px solid white;
+}
+.menu ul{
+    position: relative;
+    top: -10px;
+    left: 390px;
+}
+.menu ul li{
+    display: inline-block;
+    padding-top: 30px;
+    padding-left: 60px;
+    color: rgb(180, 11, 11);
+    cursor: pointer;
+    font-size: 25px;
+}
+/*------- login form section------*/
+
+.login-form{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-form form{
+    width: 30%;
+    height: 55%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.login-form form img{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: #1b1a19;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.login-form form input{
+    font-size: 18px;
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+    opacity: 0.8;
+    text-transform: capitalize;
+   
+}
+
+.login-btn{
+    color: #ffffff;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 10px;
+    background: #d62d20;
+    cursor: pointer;
+    transition: 0.5s all; 
+    text-transform: capitalize;
+}
+.login-form a{
+    text-decoration: none;
+    color: rgb(72, 124, 72);
+}
+.login-btn:hover{
+    background: rgb(236, 86, 31);
+}
+
+/* ------ register section -----*/
+#red{
+    color: #d62d20;
+}
+.login-form .register-title{
+    margin: 0 auto;
+    font-size: 25px;
+    opacity: 0.5;
+    font-weight: bold;
+    color: #7a7878;
+    text-transform: capitalize;  
+}
+/* iphone */
+@media only screen and (max-width: 375px){
+    body{
+        overflow: hidden;
+    }
+    .info{
+        height: 20px;
+    }
+    .contact-info{
+        margin: 0px;
+    }
+    .contact-info li{
+        display: none;
+
+    }
+    .mobile-info{
+        display: inline-block;
+    }
+    .contact-info li:last-child{
+        margin: 0px;
+    }
+    nav{
+        
+        width: 100%;
+        height: 75px;
+    }
+    
+    .menu img{
+        position: absolute;
+        margin: 0px;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 8px;
+        
+    }
+.actions{
+        margin: -12px 0px 0px 230px;
+        float: left;
+        padding-top: 0px;
+    }
+    .actions ul li{
+        font-size: 20px;   
+    }
+   
+    .actions ul li:last-child{
+        margin-left: 8px;
+        padding: 0px;
+    }
+       .menu p{
+        position: absolute;
+        left: 70px;
+        top: 30px;
+        font-size: 20px;
+        border-top: 1px solid white;
+    }
+
+.menu ul{
+    display: none;
+}
+.login-form{
+    height: 90vh; 
+}
+
+.login-form form{
+    width: 90%;
+    
+}
+.login-form form img{
+  margin-bottom: 5px;
+}
+.login-form form input{
+    margin-top: 20px; 
+}
+.login-form a{
+    margin-top: 3px;
+}
+
+/* ------ register section -----*/
+#red{
+    color: #d62d20;
+}
+.login-form .register-title{
+   padding-bottom: 2px;
+}
+}
+
+
+

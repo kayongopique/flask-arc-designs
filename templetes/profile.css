@@ -1,0 +1,311 @@
+nav{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(to left, #111110, #1d1b19);
+    color: white;
+    position: relative;
+    
+ 
+}
+.actions ul,
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.actions{
+    float: right;
+}
+.actions ul li{
+    display: inline-block;
+    padding-top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.actions ul li:last-child{
+    padding-right: 72px;
+    padding-left: 45px;
+}
+.menu img{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 8px;
+    left: 60px;
+}
+.menu p{
+    position: absolute;
+    left: 135px;
+    top: 30px;
+    font-size: 18px;
+    border-top: 2px solid white;
+}
+.menu ul{
+    position: relative;
+    top: -10px;
+    left: 390px;
+}
+.menu ul li{
+    display: inline-block;
+    padding-top: 30px;
+    padding-left: 60px;
+    color: rgb(180, 11, 11);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.profile{
+    overflow: hidden;
+    width: 100vw;
+    height: 35vh;
+    margin: 0;
+    
+}
+.profile img{
+    margin-top: -50px;
+    margin-left: 60px;
+    width: 120px;
+    height: 120px;
+    background: #1b1a19;
+    border-radius: 50%;
+}
+.profile-name{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d62d20;
+}
+.profile-name h3{
+    font-size: 22px;
+    color: #ffffff;
+    font-family: Arapey;
+    text-transform: capitalize;
+    
+}
+
+.mycart{
+    width: 80vw;
+    height: 100vh;
+    margin:  0 auto;
+    margin-top: 30px;
+}
+.mycart .title{
+    font-size: 30px;
+    letter-spacing: 0.06em;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    color: #111110;
+    /* opacity: 0.7; */
+    text-transform: capitalize;
+}
+
+.cart-card{
+    width: 100%;
+    height: 130px;
+}
+.cart-card .title-row{
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:  1px solid #d62d20;
+
+}
+.cart-card .title-row h4{
+    font-size: 18px;
+    opacity: 0.4;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.cart-card .title-row h4:nth-child(1){
+    margin-right: 30%;
+}
+.cart-card .title-row h4:nth-child(2){
+    margin-right: 30%;
+}
+.card-body{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c7c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+.card-body img{
+    width: 180px;
+    height: 100px;
+    margin-right: 15%;
+
+}
+.card-body p {
+    font-size: 18px;
+    margin-right: 15%;
+    text-align: center;
+
+}
+.card-body h4{
+    display: none;
+}
+/*iPhone*/
+@media only screen and (max-width: 375px){
+
+     .info{
+        height: 20px;
+    }
+    .contact-info{
+        margin: 0px;
+    }
+    .contact-info li{
+        display: none;
+
+    }
+    .mobile-info{
+        display: inline-block;
+    }
+    .contact-info li:last-child{
+        margin: 0px;
+    }
+    nav{
+        
+        width: 100%;
+        height: 65px;
+    }
+    
+    .menu img{
+        position: absolute;
+        margin: 0px;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 8px;
+        
+    }
+.actions{
+        margin: -12px 0px 0px 230px;
+        float: left;
+        padding-top: 0px;
+    }
+    .actions ul li{
+        font-size: 20px;   
+    }
+   
+    .actions ul li:last-child{
+        margin-left: 8px;
+        padding: 0px;
+    }
+       .menu p{
+        position: absolute;
+        left: 70px;
+        top: 30px;
+        font-size: 20px;
+        border-top: 1px solid white;
+    }
+
+.menu ul{
+    display: none;
+}
+
+.profile{
+    position: relative;
+    width: 100vw;
+    height: 25vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+.profile img{
+    margin-top: -45px;
+    margin-left: 18px;
+    width: 90px;
+    height: 90px;
+  
+}
+.profile-name{
+    display: block;
+   
+}
+.profile-name h3{
+    position: absolute;
+    font-size: 20px;
+    top: 45px;
+    left: 110px;   
+}
+.mycart{
+    width: 100vw;
+    height: 70vh;
+    margin:  0 auto;
+    margin-top: 0px;
+    margin-left: 8px;
+}
+.mycart .title{
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    padding: 2px;
+    margin: 4px;
+    
+}
+.cart-card{
+    width: 90%;
+    height: 90px;
+    
+}
+.cart-card .title-row{
+    padding: 5px;  
+}
+.cart-card .title-row h4{
+    font-size: 20px;   
+}
+.cart-card .title-row h4:nth-child(1){
+    margin-right: 18%;
+}
+.cart-card .title-row h4:nth-child(2){
+    margin-right: 12%;
+}
+
+.card-body{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c7c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+.card-body img{
+    width: 100px;
+    height: 70px;
+    margin-right: 15%;
+
+}
+.card-body p {
+    display: none;
+
+}
+.card-body h4{
+    display: block;
+    margin-right: 15%;
+    text-align: center;
+}
+.price{
+    font-size: 14px;
+}
+.checkout-btn{
+    display: none;
+
+}
+
+
+
+}
