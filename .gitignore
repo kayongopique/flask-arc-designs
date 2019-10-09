@@ -63,5 +63,9 @@ venv/
 __pycache__/
 vscode/
 
+
 #node modules
 node_modules/
+
+#package-lock.json file
+package-lock.json
