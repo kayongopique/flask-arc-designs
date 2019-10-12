@@ -27,14 +27,14 @@ class Products {
 
     getProducts(){
         try {
-        fetch(`http://127.0.0.1:8080/products.json`, 
+         let result = fetch(`http://127.0.0.1:8080/products.json`, 
           {mode: 'no-cors', headers:{'content-type': 'application/json'}}
           ).then((response) => {
              if(!response.ok){
                throw new Error('http error' +" " + response.status)
              }
              else {
-              return response.items;
+              return response;
              }
              
           }); 
@@ -43,6 +43,7 @@ class Products {
           
 
         }
+        return result;
     }
 
 }
