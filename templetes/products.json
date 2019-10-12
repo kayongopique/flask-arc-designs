@@ -1,4 +1,4 @@
-[{"id":1, "title": "PL123", "images": ["web.jpg", "web2.jpg", "web3.jpg"], 
+{ "items": [{"id":1, "title": "PL123", "images": ["web.jpg", "web2.jpg", "web3.jpg"], 
     "description": "Im a team player excuding good customer relations an EMS ", 
     "price": "$520"},
 
@@ -29,4 +29,4 @@
                             {"id":8, "title": "PL123", "images": ["web.jpg", "web2.jpg", "web3.jpg"], 
                                 "description": "Im a team player excuding good customer relations an EMS ", 
                                 "price": "$520"}
-]
+]}
