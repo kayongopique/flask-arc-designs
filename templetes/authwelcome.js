@@ -1,5 +1,5 @@
 const cartBtn = document.querySelector('.bag-btn');
-const bagBtn = document.querySelector('.bag-btn');
+// const bagBtn = document.querySelector('.bag-btn');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
 const cartDOM = document.querySelector('.cart');
@@ -157,29 +157,27 @@ class UI {
           cartOverlay.classList.add('transparent-background');
           cartDOM.classList.add('show-cart');
       }
-      }
+      
+    setupApp() {
+        cart = Storage.getCart();
+        this.setCartValues(cart);
+        this.populateCart(cart);
+        cartBtn.addEventListener('click', this.showCart());
+        closeCartBtn.addEventListener('click', this.hideCart());
+    }
 
 
+    populateCart(cart) {
+        cart.forEach(item => this.addCartItem(item));
 
+    }
 
-//     setupApp() {
-//         cart = Storage.getCart();
-//         this.setCartValues(cart);
-//         this.populateCart(cart);
-//         cartBtn.addEventListener('click', this.showCart());
-//         closeCartBtn.addEventListener('click', this.hideCart());
-//     }
+    hideCart() {
+        cartOverlay.classList.remove('transparent-background');
+        cartDOM.classList.remove('show-cart');
 
-//     populateCart(cart) {
-//         cart.forEach(item => this.addCartItem(item));
-
-//     }
-
-//     hideCart() {
-//         cartOverlay.classList.remove('transpent-overlay');
-//         cartDOM.classList.remove('show-cart');
-
-//     }
+    }
+}
 
 //     cartLogic() {
 //         clearCartBtn.addEventListener('click', () => this.clearCart());
@@ -261,13 +259,13 @@ class Storage {
         localStorage.setItem('cart', JSON.stringify(cart));
 
     }
-  }
-//     static getItem() {
-//         cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-//         return cart;
-//     }
+  
+    static getCart() {
+        cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+        return cart;
+    }
 
-// }
+}
 
 // add listner at content load
 
@@ -286,9 +284,9 @@ window.addEventListener("load",
         // ui.cartLogic();
     });
 
-    // // setup app
+    // setup app
 
-    // ui.setupApp();
+    ui.setupApp();
 
 });
 
