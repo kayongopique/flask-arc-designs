@@ -273,6 +273,10 @@ window.addEventListener("load",
     () => {
     const products = new Products();
     const ui = new UI();
+
+    // setup app
+    ui.setupApp();
+    
     //call func to return products
 
     products.getProducts().then(products => {
@@ -284,9 +288,7 @@ window.addEventListener("load",
         // ui.cartLogic();
     });
 
-    // setup app
-
-    ui.setupApp();
+    
 
 });
 
