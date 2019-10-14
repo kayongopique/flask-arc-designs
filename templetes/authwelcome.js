@@ -134,7 +134,7 @@ class UI {
                       tempTotal += item.price ;
                       itemsTotal += item.amount;
                   });
-                  cartTotal.innerText = parseFloat(tempTotal);
+                  cartTotal.innerText = tempTotal;
                   cartItems.innerText = itemsTotal;
           
               }
@@ -177,65 +177,44 @@ class UI {
         cartDOM.classList.remove('show-cart');
 
     }
-}
 
-//     cartLogic() {
-//         clearCartBtn.addEventListener('click', () => this.clearCart());
 
-//         // cart functionality
+    cartLogic() {
+        clearCartBtn.addEventListener('click', () => this.clearCart());
 
-//         cartContent.addEventListener('click', event => {
-//             if(event.target.classList.contains('remove-item')) {
-//                 let removeItem = event.target;
-//                 let id = removeItem.dataset.id;
-//                 cartContent.removeChild(removeItem.parentElement.parentElement);
-//                 this.removeItem(id)
-//             }else if(event.target.classList.contains('fa-chevron-up')){
-//                 let addamount = event.target;
-//                 let id = addamount.dataset.id;
-//                 let tempitem = cart.find(item => item.id === id);
-//                 tempitem.amount = tempitem.amount +1;
-//                 Storage.saveCart(cart);
-//                 this.setCartValues(cart);
-//                 addamount.nextElementSiblings.innerText = tempitem.amount;
-//             }else if(event.target.classList.contains('fa-chevron-down')){
-//             let loweramount = event.target;
-//             let id = loweramount.dataset.id;
-//             let tempitem = cart.find(item => item.id === id);
-//             tempitem.amount = tempitem.amount - 1;
+        // cart functionality
 
-//             if(tempitem.amount > 0){
-//                 Storage.saveCart(cart);
-//                 this.setCartValues(cart);
-//                 addamount.previous.ElementSiblings.innerText = tempitem.amount;
+        cartContent.addEventListener('click', event => {
+            if(event.target.classList.contains('remove-item')) {
+                let removeItem = event.target;
+                let id = removeItem.dataset.id;
+                cartContent.removeChild(removeItem.parentElement.parentElement);
+                this.removeItem(id)
+            }
+        });
+    }
 
-//             }else{
-//                 cartContent.removeChild(loweramount.parentElement.parentElement);
-//                 this.removeItem(id);
-//             }
-//             }
-//         });
-//     }
+    clearCart() {
+        let cartItems = cart.map(item => item.id);
+        cartItems.forEach(id => this.removeItem(id));
+    }
 
-//     clearCart() {
-//         let cartItems = cart.map(item => item.id);
-//         cartItems.forEach(id => this.removeItem(id));
-//     }
+    removeItem(id) {
+        cart = cart.filter(item => item.id !== id);
+        this.setCartValues(cart);
+        Storage.saveCart(cart);
 
-//     removeItem(id) {
-//         cart = cart.filter(item => item.id !== id);
-//         this.setCartValues(cart);
-//         Storage.saveCart(cart);
+        let btn =this.getSingleBtn(id);
+        btn.disable = false;
+        btn.innerHTML = `<i class='fas fa-shopping-cart'></i>add to cart`
+    }
 
-//         let btn =this.getSingleBtn(id);
-//     }
-
-//     getSingleBtn(id) {
-//         return buttonsDOM.find(button => button.dataset.id === id);
-//     }
+    getSingleBtn(id) {
+        return buttonsDOM.find(button => button.dataset.id === id);
+    }
    
 
-// }
+}
  
 
 class Storage {
