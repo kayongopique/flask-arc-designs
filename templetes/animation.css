@@ -586,7 +586,7 @@ h5 #red{
     transition: all 0.3s;
     background: rgba(17, 17, 17, 0.8);
     z-index: 2;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .cart-item{
     display: grid;
@@ -606,12 +606,12 @@ h5 #red{
     padding: 1.5em;
     transition: all 0.3s;
     z-index: 3;
-    transform: translateX(100%)
+    /* transform: translateX(100%) */
 }
-.showCart{
+.show-cart{
     transform: translateX(0%);
 }
-.transparentBackground{
+.transparent-background{
     visibility: visible;
 }
 @media only screen and (min-width: 768px){
