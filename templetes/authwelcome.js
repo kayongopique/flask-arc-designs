@@ -197,6 +197,10 @@ class UI {
     clearCart() {
         let cartItems = cart.map(item => item.id);
         cartItems.forEach(id => this.removeItem(id));
+        while(cartContent.children.length > 0){
+            cartContent.removeChild(cartContent.children[0]);
+        }
+        this.hideCart();
     }
 
     removeItem(id) {
@@ -210,7 +214,7 @@ class UI {
     }
 
     getSingleBtn(id) {
-        return buttonsDOM.find(button => button.dataset.id === id);
+        return buttonsDOM.find(button => JSON.parse(button.dataset.id)=== id);
     }
    
 
@@ -264,7 +268,7 @@ window.addEventListener("load",
 
     }).then(() => {
         ui.getButtons();
-        // ui.cartLogic();
+        ui.cartLogic();
     });
 
     
