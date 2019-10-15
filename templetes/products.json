@@ -1,32 +1,32 @@
 { "items": [{"id":1, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
     "description": "Im a team player excuding good customer relations an EMS ", 
-    "price": "$520"},
+    "price": 520},
 
     {"id":2, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
         "description": "Im a team player excuding good customer relations an EMS ", 
-        "price": "$520"},
+        "price": 520},
 
         {"id":3, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
             "description": "Im a team player excuding good customer relations an EMS ", 
-            "price": "$520"},
+            "price": 520},
 
             {"id":4, "title": "PL123", "images":["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
                 "description": "Im a team player excuding good customer relations an EMS ", 
-                "price": "$520"},
+                "price": 520},
 
                 {"id":5, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
                     "description": "Im a team player excuding good customer relations an EMS ", 
-                    "price": "$520"},
+                    "price": 520},
 
                     {"id":6, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
                         "description": "Im a team player excuding good customer relations an EMS ", 
-                        "price": "$520"},
+                        "price": 520},
 
                         {"id":7, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
                             "description": "Im a team player excuding good customer relations an EMS ", 
-                            "price": "$520"},
+                            "price": 520},
                             
                             {"id":8, "title": "PL123", "images": ["./imgs/web.jpg", "./imgs/web2.jpg", "./imgs/web3.jpg"], 
                                 "description": "Im a team player excuding good customer relations an EMS ", 
-                                "price": "$520"}
+                                "price": 520}
 ]}

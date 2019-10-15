@@ -84,7 +84,7 @@ class UI {
                 <h3 class="product-title">
                     ${product.title}
                 </h3>
-                <h4 class="price">${product.price}</h4>
+                <h4 class="price">$${product.price}</h4>
             </article>
             `
             
@@ -187,7 +187,7 @@ class UI {
         cartContent.addEventListener('click', event => {
             if(event.target.classList.contains('remove-item')) {
                 let removeItem = event.target;
-                let id = removeItem.dataset.id;
+                let id = JSON.parse(removeItem.dataset.id);
                 cartContent.removeChild(removeItem.parentElement.parentElement);
                 this.removeItem(id)
             }
@@ -205,6 +205,8 @@ class UI {
 
     removeItem(id) {
         cart = cart.filter(item => item.id !== id);
+        console.log(cart);
+        
         this.setCartValues(cart);
         Storage.saveCart(cart);
 
